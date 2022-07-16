@@ -1,8 +1,8 @@
 {
-	"name": "typescript-template-library",
+	"name": "riao",
 	"version": "1.0.0",
 	"ts-project-version": "2.3.0",
-	"description": "typescript-template-library",
+	"description": "riao",
 	"private": "true",
 	"scripts": {
 		"start": "npm run dev",
@@ -47,13 +47,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/StatelessStudio/typescript-template-library.git"
+		"url": "git+https://github.com/StatelessStudio/riao.git"
 	},
 	"author": "stateless-studio",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/StatelessStudio/typescript-template-library/issues"
+		"url": "https://github.com/StatelessStudio/riao/issues"
 	},
-	"homepage": "https://github.com/StatelessStudio/typescript-template-library#readme",
+	"homepage": "https://github.com/StatelessStudio/riao#readme",
 	"keywords": []
 }
