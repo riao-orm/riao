@@ -1,0 +1,1 @@
+export { PersistenceDriver } from './interface';
