@@ -1,11 +1,14 @@
 import 'jasmine';
-import { DataModel } from 'data-model';
+import { DataModel } from '../../../src/data-model';
+import { TextValue } from '../../../src/column';
+
+class TestModel extends DataModel {
+	public foo: TextValue = 'bar';
+}
 
 describe('Data Model', () => {
 	it('exports a data model interface', () => {
-		const model: DataModel = {
-			foo: 'bar'
-		};
+		const model = new TestModel();
 
 		expect(model.foo).toEqual('bar');
 	});

@@ -1,3 +1,1 @@
-export interface DataModel {
-	[key: string]: any;
-}
+export abstract class DataModel {}
