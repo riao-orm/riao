@@ -1,1 +1,1 @@
-export { DataModel } from './interface';
+export { DataModel } from './data-model';
