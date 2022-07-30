@@ -28,6 +28,9 @@
 		"coveralls": "cat ./coverage/lcov.info | coveralls",
 		"admin:example": "ts-node script/example"
 	},
+	"dependencies": {
+		"reflect-metadata": "^0.1.13"
+	},
 	"devDependencies": {
 		"@istanbuljs/nyc-config-typescript": "^1.0.2",
 		"@types/jasmine": "^3.10.3",

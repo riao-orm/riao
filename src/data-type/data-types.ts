@@ -37,4 +37,4 @@ export enum DataType {
 	// Enum
 	ENUM = 'ENUM',
 	SET = 'SET',
-};
+}
