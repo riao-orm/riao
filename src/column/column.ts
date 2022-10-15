@@ -23,7 +23,7 @@ export function Column(options: ColumnOptions) {
  */
 export function getColumnOptions(
 	key: string,
-	target: DataModel,
+	target: DataModel
 ): ColumnOptions {
 	return Reflect.getMetadata(columnKey, target, key);
 }

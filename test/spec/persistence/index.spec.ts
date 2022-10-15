@@ -3,8 +3,7 @@ import { PersistenceDriver } from 'persistence';
 
 describe('Persistance', () => {
 	it('exports a persistance driver interface', () => {
-		const driver: PersistenceDriver = {
-		};
+		const driver: PersistenceDriver = {};
 
 		expect(driver).toEqual({});
 	});

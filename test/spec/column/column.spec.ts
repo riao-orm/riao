@@ -76,7 +76,7 @@ describe('Column', () => {
 			type: DataType.DECIMAL,
 			default: 10.32,
 			significant: 12,
-			decimal: 2
+			decimal: 2,
 		});
 	});
 

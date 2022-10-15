@@ -10,12 +10,10 @@ export interface ConnectionOptionsObject {
 	credentials: BasicAuth;
 }
 
-export type ConnectionOptions =
-	ConnectionString |
-	ConnectionOptionsObject;
+export type ConnectionOptions = ConnectionString | ConnectionOptionsObject;
 
 export abstract class Connection {
-	protected conn: any;
+	protected conn: unknown;
 	protected connectionOptions: ConnectionOptions;
 
 	public async connect(options: ConnectionOptions): Promise<void> {

@@ -26,9 +26,7 @@ export function testDefinition(
 	const actual = getColumnDefinition(expected.name, instance);
 
 	for (const key in expected) {
-		expect(actual[key])
-			.withContext(key)
-			.toEqual(expected[key]);
+		expect(actual[key]).withContext(key).toEqual(expected[key]);
 	}
 
 	return actual;

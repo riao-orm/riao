@@ -66,16 +66,16 @@ export type SetValue<T = string> = T[];
  * Type for a property
  */
 export type ColumnValue =
-	BoolValue |
-	BitValue |
-	IntegerValue |
-	DecimalValue |
-	DateValue |
-	TextValue |
-	BinaryValue |
-	BlobValue |
-	EnumValue |
-	SetValue;
+	| BoolValue
+	| BitValue
+	| IntegerValue
+	| DecimalValue
+	| DateValue
+	| TextValue
+	| BinaryValue
+	| BlobValue
+	| EnumValue
+	| SetValue;
 
 /**
  * Base interface for column options
@@ -309,7 +309,7 @@ export interface MediumTextColumnOptions extends BaseTextColumnOptions {
  * Long text column options
  */
 export interface LongTextColumnOptions extends BaseTextColumnOptions {
-	type: DataType.LONGTEXT
+	type: DataType.LONGTEXT;
 }
 
 // -----------------------------------------------------------------------------
@@ -401,38 +401,38 @@ export interface SetColumnOptions extends BaseEnumColumnOptions {
  * Column options
  */
 export type ColumnOptions =
-	BoolColumnOptions |
-	BitColumnOptions |
-	TinyIntColumnOptions |
-	SmallIntColumnOptions |
-	IntColumnOptions |
-	BigIntColumnOptions |
-	DecimalColumnOptions |
-	FloatColumnOptions |
-	DoubleColumnOptions |
-	SmallMoneyColumnOptions |
-	MoneyColumnOptions |
-	DateColumnOptions |
-	TimeColumnOptions |
-	DateTimeColumnOptions |
-	TimestampColumnOptions |
-	YearColumnOptions |
-	CharColumnOptions |
-	VarCharColumnOptions |
-	TinyTextColumnOptions |
-	TextColumOptions |
-	MediumTextColumnOptions |
-	LongTextColumnOptions |
-	BinaryColumnOptions |
-	VarBinaryColumnOptions |
-	TinyBlobColumnOptions |
-	BlobColumnOptions |
-	MediumBlobColumnOptions |
-	LongTextColumnOptions |
-	BlobColumnOptions |
-	MediumBlobColumnOptions |
-	EnumColumnOptions |
-	SetColumnOptions;
+	| BoolColumnOptions
+	| BitColumnOptions
+	| TinyIntColumnOptions
+	| SmallIntColumnOptions
+	| IntColumnOptions
+	| BigIntColumnOptions
+	| DecimalColumnOptions
+	| FloatColumnOptions
+	| DoubleColumnOptions
+	| SmallMoneyColumnOptions
+	| MoneyColumnOptions
+	| DateColumnOptions
+	| TimeColumnOptions
+	| DateTimeColumnOptions
+	| TimestampColumnOptions
+	| YearColumnOptions
+	| CharColumnOptions
+	| VarCharColumnOptions
+	| TinyTextColumnOptions
+	| TextColumOptions
+	| MediumTextColumnOptions
+	| LongTextColumnOptions
+	| BinaryColumnOptions
+	| VarBinaryColumnOptions
+	| TinyBlobColumnOptions
+	| BlobColumnOptions
+	| MediumBlobColumnOptions
+	| LongTextColumnOptions
+	| BlobColumnOptions
+	| MediumBlobColumnOptions
+	| EnumColumnOptions
+	| SetColumnOptions;
 
 /**
  * A ColumnDefinition is the result of a compiled model key, val, and Column
@@ -450,7 +450,7 @@ export type ColumnDefinition = ColumnOptions & { name: string };
  */
 export function getColumnDefinition(
 	key: string,
-	target: DataModel,
+	target: DataModel
 ): ColumnDefinition {
 	const defualtValue = target[key];
 	const defaultMetadata: Partial<ColumnOptions> = {};
@@ -462,9 +462,7 @@ export function getColumnDefinition(
 		defaultMetadata.default = defualtValue;
 	}
 
-	return Object.assign(
-		defaultMetadata,
-		getColumnOptions(key, target),
-		{ name: key }
-	);
+	return Object.assign(defaultMetadata, getColumnOptions(key, target), {
+		name: key,
+	});
 }
